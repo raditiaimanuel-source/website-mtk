@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --biru: #2457a6;
+  --biru-tua: #173b73;
+  --biru-muda: #eaf2ff;
+  --putih: #ffffff;
+  --teks: #263449;
+  --abu: #64748b;
+  --latar: #f5f8fd;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--biru);
+  color: var(--putih);
+  text-align: center;
+  padding: 34px 18px;
+}
+
+header h1 {
+  font-size: clamp(25px, 4vw, 36px);
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 5px;
+  color: #e4edff;
+}
+
+nav {
+  background: var(--putih);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 10px;
+  box-shadow: 0 2px 12px rgba(30, 64, 110, .08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: var(--teks);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 13px;
+  border-radius: 7px;
+}
+
+nav a:hover, nav a.aktif {
+  background: var(--biru-muda);
+  color: var(--biru);
+}
+
+.hero {
+  margin: 30px auto;
+  width: min(1100px, calc(100% - 36px));
+  background: linear-gradient(120deg, #eaf2ff, #f7faff);
+  border: 1px solid #d8e5fb;
+  border-radius: 18px;
+  padding: 55px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.hero-text { max-width: 650px; }
+
+.label-kecil {
+  color: var(--biru);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  color: var(--biru-tua);
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.hero p { color: #52647d; max-width: 590px; }
+
+.ilustrasi {
+  min-width: 210px;
+  width: 240px;
+  height: 210px;
+  border-radius: 22px;
+  background: var(--biru);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  box-shadow: 12px 12px 0 #cbdcf8;
+  transform: rotate(2deg);
+}
+
+.tombol {
+  display: inline-block;
+  background: var(--biru);
+  color: white;
+  text-decoration: none;
+  padding: 11px 19px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.tombol:hover { background: var(--biru-tua); }
+
+main {
+  width: min(1100px, calc(100% - 36px));
+  margin: 30px auto 50px;
+}
+
+.judul-bagian {
+  text-align: center;
+  margin: 38px 0 24px;
+}
+
+.judul-bagian h2 {
+  color: var(--biru-tua);
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+.judul-bagian p { color: var(--abu); }
+
+.grid-materi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.materi, .konten {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e3eaf5;
+  box-shadow: 0 5px 18px rgba(35, 69, 120, .05);
+  margin-bottom: 18px;
+}
+
+.materi h3, .konten h2 {
+  color: var(--biru);
+  margin-bottom: 9px;
+}
+
+.materi p, .konten p { margin-bottom: 10px; }
+
+.nomor {
+  display: inline-block;
+  color: var(--biru);
+  background: var(--biru-muda);
+  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.rumus {
+  background: #f0f5ff;
+  border-left: 4px solid var(--biru);
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--biru-tua);
+  overflow-wrap: anywhere;
+}
+
+ul, ol { padding-left: 23px; margin: 8px 0 12px; }
+
+.keterangan { color: var(--abu); font-size: 14px; }
+
+.profil-foto {
+  width: 160px;
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+footer {
+  background: var(--biru-tua);
+  color: white;
+  text-align: center;
+  padding: 22px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 650px) {
+  header { padding: 25px 14px; }
+  nav { position: static; }
+  nav a { font-size: 13px; padding: 7px 9px; }
+  .hero {
+    padding: 35px 23px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ilustrasi {
+    align-self: center;
+    width: 180px;
+    min-width: 180px;
+    height: 150px;
+    font-size: 38px;
+  }
+  main { width: min(100% - 26px, 1100px); }
+  .materi, .konten { padding: 19px; }
+}
